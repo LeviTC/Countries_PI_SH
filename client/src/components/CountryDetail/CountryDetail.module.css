@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content:center;
+}
+
+.detailContainer {
+    background-color: rgba(53, 53, 53, 0.9);
+    border: 2px solid #FF4655;
+    border-radius: 15px;
+    margin: 50px;
+    display:flex;
+    width: 60%;
+    /* height: min-content; */
+}
+
+.countryInfo {
+    margin-left: 50px;
+}
+
+.flagImage {
+    margin-top: 40px;
+    margin-left: 60%;
+    border-radius: 20px;
+   border: 2px solid rgb(15, 18, 4);
+}

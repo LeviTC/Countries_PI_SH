@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+div {
+  color: beige ;
+}
+body {
+  background-image: url('./assets/images/backgroundImage_PI.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:  center;
+  font-family: 'Valorant', sans-serif;
+
+}

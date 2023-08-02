@@ -1,0 +1,24 @@
+.sortContainer {
+    background-color: rgba(53, 53, 53, 0.9);
+    height: 45px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sortSelect {
+    color: beige;
+    background-color: rgba(15, 14, 14, 0.7);
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+}
+
+.sortSelect:hover {
+    border: 2px solid #FF4655;
+    color: #FF4655;
+    transition: 0.5s;
+}

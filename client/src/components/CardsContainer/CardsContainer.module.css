@@ -1,0 +1,85 @@
+.CardsContainer {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    margin: 4%;
+    
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.buttonsContainer {
+    /* background-color: aliceblue; */
+    /* background-color: #FF4655; */
+    display: flex;
+    justify-items:center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.CardsContainer img{
+   width: 150px;
+   height: 100px;
+   margin: 3px 3px 3px 3px;
+   border-radius: 20px;
+   border: 2px solid rgb(15, 18, 4);
+;}
+
+.nextPrevButtons {
+    color: beige;
+    background-color: rgb(32, 32, 44);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nextPrevButtons:hover{
+    color: #FF4655;
+    scale: 1.2;
+    transition: 0.5s;
+}
+
+.numberButtons {
+    color: beige;
+    background-color: rgba(53, 53, 53, 0.9);
+    height: 40px;
+    max-width:35px;
+    min-width: 35px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.numberButtons:hover {
+    background-color: rgba(53, 53, 53, 0.9);
+    border: 3px solid #FF4655;
+    color: #FF4655;
+    transition: 0.5s;
+    scale: 1.2;    
+}
+
+.currentButton{
+    color: beige;
+    background-color: rgba(53, 53, 53, 0.9);
+    height: 40px;
+    max-width:35px;
+    min-width: 35px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: rgba(53, 53, 53, 0.9);
+    border: 3px solid #FF4655;
+    color: #FF4655;
+    transition: 0.5s;
+    scale: 1.2;  
+}
+
+.noResults {
+    color: #FF4655;
+    background-color: rgba(53, 53, 53, 0.9);
+}

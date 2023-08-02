@@ -1,0 +1,44 @@
+.navButtons {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background-color: rgba(15, 14, 14, 0.7);
+    font-weight: 600;
+    font-family: 'Valorant', sans-serif;
+    border-radius: 5px;
+  }
+.navButtons:hover {
+  color:#f44336;
+  transition: 0.5s;
+}
+  
+  .navButtons::before {
+    margin-left: auto;
+  }
+  
+  .navButtons::after, .navButtons::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .navButtons:hover::after, .navButtons:hover::before {
+    width: 100%;
+  }
+
+.navContainer {
+  background-color: rgba(53, 53, 53, 0.9);
+  border-radius: 10px;
+  border: solid 1px #FF4655;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-items:center;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-top: -8px; */
+}
