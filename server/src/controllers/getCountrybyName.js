@@ -14,7 +14,7 @@ const getCountryByName = async (name) => {
         return countriesFound;
     } catch (error) {
         throw new Error(error.message);
-    }
+    };
 };
 
 module.exports = getCountryByName;

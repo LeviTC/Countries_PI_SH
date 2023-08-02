@@ -11,7 +11,7 @@ export const getAllCountries = () => {
             dispatch({ type: GET_ALL_COUNTRIES, payload: data });
         } catch (error) {
             throw new Error(error.message);
-        }
+        };
     };
 
 };

@@ -5,6 +5,7 @@ const { Country } = require("./src/db.js");
 const PORT = 3001;
 
 conn.sync({ force: true }).then(() => {
+  //Cargamos todos los paise a nuestra DB.
   axios.get("http://localhost:5000/countries")
     .then((response) => {
       let allCountries = response.data;
@@ -23,8 +24,10 @@ conn.sync({ force: true }).then(() => {
           population: population
         })
       });
-    })
+    });
+
   server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
-  })
+  });
+
 });

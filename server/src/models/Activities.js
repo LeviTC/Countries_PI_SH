@@ -14,15 +14,13 @@ module.exports = (DB) => {
             validate: {
                 noBlanksValidation: function (value) {
                     if (!/^(?!.*  )(?!\s*$).+/.test(value)) {
-                        throw new Error("Field 'Name': Not empty, no lone whitespace, max 2 consecutive spaces.")
-                    }
+                        throw new Error("Field 'Name': Not empty, no lone whitespace, max 2 consecutive spaces.");
+                    };
                 },
                 async isUnique(value) {
-                    let activityName = await Activity.findOne({ where: { name: value } });
-                    if (activityName) throw new Error("There is already an activity with that name.");
+                    let existingActivity = await Activity.findOne({ where: { name: value } });
+                    if (existingActivity) throw new Error("There is already an activity with that name.");
                 }
-
-
             }
         },
         difficulty: {
@@ -62,5 +60,5 @@ module.exports = (DB) => {
         }
     }, {
         timestamps: false
-    })
-}
+    });
+};

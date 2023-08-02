@@ -35,17 +35,17 @@ router.get("/countries/name", async (req, res) => {
         return res.status(200).json(countriesByName);
     } catch (error) {
         return res.status(400).json(error.message)
-    }
+    };
 });
 
 router.post("/activities", async (req, res) => {
     console.log(req.body);
     try {
         let activiy = await postActivity(req.body);
-        return res.status(200).json(`The ${activiy} activity has been created sucessfully`)
+        return res.status(200).json(`The "${activiy}" activity has been created sucessfully.`)
     } catch (error) {
         return res.status(400).json(error.message)
-    }
+    };
 });
 
 router.get("/activities", async (req, res) => {
@@ -54,8 +54,7 @@ router.get("/activities", async (req, res) => {
         return res.status(200).json(allActivities)
     } catch (error) {
         return res.status(400).json(error.message);
-    }
-})
-
+    };
+});
 
 module.exports = router;
