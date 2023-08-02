@@ -3,7 +3,7 @@
     flex-flow: wrap row;
     justify-content: space-between;
     margin: 4%;
-    
+    text-align: center;
 }
 
 .navLink {

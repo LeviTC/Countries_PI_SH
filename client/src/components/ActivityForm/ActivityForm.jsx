@@ -72,7 +72,7 @@ export default function ActivityForm(){
 
     return (
         <div className={style.containerForm} >
-            <form onSubmit={handleSubmit}className={style.form} >
+            <form onSubmit={handleSubmit}className={style.form} method="post" >
                 <div className={style.textInputWrapper}>
                     <label htmlFor="name">Name: </label><br />
                     <input className={style.textInput} 
@@ -107,7 +107,7 @@ export default function ActivityForm(){
                     {errors.duration && <span className={style.errorText} >{errors.duration}</span>}
 
                 <div >
-                    <label htmlFor="season">Season: </label><br />
+                    <label htmlFor="season">Select: </label><br />
                     <select className={style.seasonSelect} name="season" onChange={handleChange}>
                         <option value="Spring">Spring</option>
                         <option value="Summer">Summer</option>
