@@ -1,7 +1,7 @@
 import "./ActivityForm.module.css"
 import axios from "axios";
 import { useState, useEffect } from "react";
-import activityFormValidation from "../../validations/activityFormValidation";
+import activityFormValidation from "./activityFormValidation";
 import { useDispatch, useSelector } from "react-redux";
 import {getAllCountries} from "../../redux/actions/getAllCountries";
 import style from "./ActivityForm.module.css";
@@ -10,6 +10,7 @@ export default function ActivityForm(){
     
     const countries = useSelector(({countries}) =>  countries)
     const dispatch = useDispatch();
+    const POST_URL="http://localhost:3001/activities";
     
     const [errors, setErrors] = useState({});
     const [activityForm, setActivityForm] = useState(
@@ -21,15 +22,7 @@ export default function ActivityForm(){
             CountryId: []
         }
     );
-    
-    const POST_URL="http://localhost:3001/activities";
-    
-    useEffect(()=>{
-        !countries.length&&dispatch(getAllCountries());
-    },[])
-
-
-    
+     
     //Handlers.
     const handleChange = (event) => {
         const {name, value, selectedOptions} = event.target;
@@ -57,9 +50,9 @@ export default function ActivityForm(){
         event.preventDefault();
 
         axios.post(POST_URL,activityForm)
-        .then(res=> alert(res.data) )
+        .then(res=>{dispatch(getAllCountries()); alert(res.data)} )
         .catch(error =>  alert(error.response.data) );
-        // dispatch(getAllCountries())
+        
         setActivityForm({
             name: "",
             difficulty: "1",
