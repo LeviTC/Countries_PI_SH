@@ -1,7 +1,7 @@
 import "./ActivityForm.module.css"
 import axios from "axios";
 import { useState, useEffect } from "react";
-import activityFormValidation from "./activityFormValidation";
+import activityFormValidation from "../../validations/activityFormValidation";
 import { useDispatch, useSelector } from "react-redux";
 import {getAllCountries} from "../../redux/actions/getAllCountries";
 import style from "./ActivityForm.module.css";
@@ -100,7 +100,7 @@ export default function ActivityForm(){
                     {errors.duration && <span className={style.errorText} >{errors.duration}</span>}
 
                 <div >
-                    <label htmlFor="season">Select: </label><br />
+                    <label htmlFor="season">Select season: </label><br />
                     <select className={style.seasonSelect} name="season" onChange={handleChange}>
                         <option value="Spring">Spring</option>
                         <option value="Summer">Summer</option>
